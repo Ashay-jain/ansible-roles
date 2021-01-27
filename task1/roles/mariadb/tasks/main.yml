@@ -1,6 +1,6 @@
 --- # playbook for mariadb 
 - name: 1 installing mariadb server
-  yum: name=mariadb-5.5.68-1.el7.x86_64 state=started
+  yum: name=mariadb-server state=installed
  
 - name: 2 starting mysql services
-  service: name=mysql state=started 
+  service: name=mariadb.service state=started 
