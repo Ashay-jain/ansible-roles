@@ -1,0 +1,13 @@
+--- # apache playbook
+- name: 1. install Apache
+  yum: name=httpd state=present
+
+- name: 2. install php module for apache
+  yum: name=php-5.4.16-48.el7.x86_64 state=present
+
+- name: starting apache
+  service: name=httpd state=started
+
+- name: install hello world php script
+  copy: src=index.php dest=/var/www/html/index.html mode=0644
+
