@@ -3,7 +3,7 @@
   yum: name=httpd state=present
 
 - name: 2. install php module for apache
-  yum: name=php-5.4.16-48.el7.x86_64 state=present
+  yum: name=php-5.4.16-46.amzn2.0.2.x86_64  state=present
 
 - name: starting apache
   service: name=httpd state=started
