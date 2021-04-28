@@ -1,8 +1,9 @@
 --- #main playbook
-- hosts: demo
-  user: ansible
+- hosts: all
+  user: ubuntu
   become: yes
   connection: ssh
+
   roles: 
        - apache2
-       - mariadb
+       - mysql
